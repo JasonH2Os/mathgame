@@ -1,0 +1,22 @@
+/* General styling for the game */
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Styling for the answer input area */
+.inputArea {
+    margin-top: 20px;
+}
+
+/* Styling for the feedback message */
+#feedback {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+.character {
+    transform: translateY(0);
+}
+
