@@ -4,11 +4,17 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
     padding-top: 50px;
+    background-color: #131212; /* Light grey background for contrast */
 }
 
 /* Styling for the answer input area */
 .inputArea {
     margin-top: 20px;
+    padding: 15px;
+    border: 20px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff; /* White background for input area */
+    display: inline-block; /* To group the elements closer */
 }
 
 /* Styling for the feedback message */
@@ -16,7 +22,46 @@ body {
     font-size: 1.5em;
     margin-top: 20px;
 }
+
 .character {
+    font-size: 2em; /* Increase emoji size */
+    transition: 0.3s; /* Smooth transition for any change */
+    display: inline-block; /* Allows for the transform property to affect inline elements like <span> or <div> */
     transform: translateY(0);
+    margin-top: 15px; /* Spacing for the character */
 }
 
+/* SVG styling */
+#dancingCharacter {
+    display: inline-block; /* Align SVG alongside other elements */
+    margin-left: 20px; /* Add some spacing between SVG and adjacent elements */
+    vertical-align: middle; /* Align SVG with the middle of adjacent elements */
+}
+
+#dancingCharacter circle {
+    transition: 0.3s; /* Smooth transition for the circle within the SVG */
+}
+.sprite {
+    width: 100px;
+    height: 100px;
+    background: url('https://i.pinimg.com/originals/b2/c2/cb/b2c2cb59180790e51384cf329b2867d7.jpg') 0 0 no-repeat;
+    margin: 50px;  
+}
+
+#question {
+    font-size: 2em;
+}
+@keyframes rainbow {
+    0%   {color: red;}
+    14%  {color: orange;}
+    28%  {color: yellow;}
+    42%  {color: green;}
+    57%  {color: blue;}
+    71%  {color: indigo;}
+    85%  {color: violet;}
+    100% {color: red;}
+}
+
+#question {
+    animation: rainbow 8s infinite;  /* 8 seconds for one full rainbow cycle; adjust as desired */
+}
