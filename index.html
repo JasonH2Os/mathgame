@@ -1,4 +1,3 @@
-<!-- The main structure for the math game -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +16,18 @@
     <!-- Area for inputting the answer and submitting it -->
     <div class="inputArea">
         <input type="number" id="answer" placeholder="Your answer here...">
-        <button onclick="checkAnswer()">Submit</button>
+        <button id="submitButton" onclick="checkAnswer()">Submit</button>
+
+
+        <!-- SVG for the dancing character, hidden initially -->
+        <svg id="dancingCharacter" width="100" height="100" style="display: none;">
+            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+        </svg>
+
+        <!-- Emoji character -->
         <div id="character" class="character">🙂</div>
-        
+        <div id="spriteCharacter" class="sprite"></div>
+
     </div>
     
     <!-- Feedback section to show if the answer is correct or not -->
@@ -28,6 +36,6 @@
     <!-- Linking the JavaScript file for game functionality -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="script.js"></script>
-    
 </body>
 </html>
+
