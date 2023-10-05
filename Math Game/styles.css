@@ -1,0 +1,78 @@
+/* General styling for the game */
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #131212; /* Light grey background for contrast */
+}
+
+/* Styling for the answer input area */
+.inputArea {
+    margin-top: 20px;
+    padding: 15px;
+    border: 20px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff; /* White background for input area */
+    display: inline-block; /* To group the elements closer */
+}
+
+/* Styling for the feedback message */
+#feedback {
+    font-size: 3.5em;
+    margin-top: 20px;
+}
+
+.character {
+    font-size: 2em; /* Increase emoji size */
+    transition: 0.3s; /* Smooth transition for any change */
+    display: inline-block; /* Allows for the transform property to affect inline elements like <span> or <div> */
+    transform: translateY(0);
+    margin-top: 15px; /* Spacing for the character */
+}
+
+/* SVG styling */
+#dancingCharacter {
+    display: inline-block; /* Align SVG alongside other elements */
+    margin-left: 20px; /* Add some spacing between SVG and adjacent elements */
+    vertical-align: middle; /* Align SVG with the middle of adjacent elements */
+}
+
+#dancingCharacter circle {
+    transition: 0.3s; /* Smooth transition for the circle within the SVG */
+}
+.sprite {
+    width: 200px;
+    height: 200px;
+    background: url('https://img.craftpix.net/2017/10/2d-fantasy-ninja-sprite-sheets-5.jpg') 0 0 no-repeat;
+    margin: 50px;  
+    background-size: 2000px; /* This should be (width_of_each_sprite_frame * number_of_frames) */
+    animation: play .8s steps(6) infinite;
+    margin: 20px auto; 
+}
+
+#question {
+    font-size: 3em;
+}
+@keyframes rainbow {
+    0%   {color: red;}
+    14%  {color: orange;}
+    28%  {color: yellow;}
+    42%  {color: green;}
+    57%  {color: blue;}
+    71%  {color: indigo;}
+    85%  {color: violet;}
+    100% {color: red;}
+}
+
+#question {
+    animation: rainbow 8s infinite;  /* 8 seconds for one full rainbow cycle; adjust as desired */
+}
+h1 {
+    animation: rainbow 8s infinite;  /* 8 seconds for one full rainbow cycle; adjust as desired */
+}
+@keyframes play {
+    100% {
+        background-position: -600px;  /* This should be -(width_of_each_sprite_frame * number_of_frames) + width_of_each_sprite_frame */
+    }
+}
